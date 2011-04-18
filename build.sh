@@ -10,7 +10,7 @@ export CC=agcc
 make
 
 # installation step
-installdir=$workspace/..
+installdir=$workspace/../install.d
 mkdir -p /tmp/system/bin
 cd tools
 cp i2cdetect i2cdump i2cget i2cset /tmp/system/bin
