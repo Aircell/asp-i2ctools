@@ -36,10 +36,10 @@ $(TOOLS_DIR)/i2cget: $(TOOLS_DIR)/i2cget.o $(TOOLS_DIR)/i2cbusses.o $(TOOLS_DIR)
 #
 
 $(TOOLS_DIR)/i2cdetect.o: $(TOOLS_DIR)/i2cdetect.c $(TOOLS_DIR)/i2cbusses.h $(INCLUDE_DIR)/linux/i2c-dev.h
-	$(CC) $(TOOLS_CFLAGS) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) $(TOOLS_CFLAGS) -c $< -o $@
 
 $(TOOLS_DIR)/i2cdump.o: $(TOOLS_DIR)/i2cdump.c $(TOOLS_DIR)/i2cbusses.h $(TOOLS_DIR)/util.h $(INCLUDE_DIR)/linux/i2c-dev.h
-	$(CC) $(TOOLS_CFLAGS) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) $(TOOLS_CFLAGS) -c $< -o $@
 
 $(TOOLS_DIR)/i2cset.o: $(TOOLS_DIR)/i2cset.c $(TOOLS_DIR)/i2cbusses.h $(TOOLS_DIR)/util.h $(INCLUDE_DIR)/linux/i2c-dev.h
 	$(CC) $(CFLAGS) $(TOOLS_CFLAGS) -c $< -o $@
@@ -48,7 +48,7 @@ $(TOOLS_DIR)/i2cget.o: $(TOOLS_DIR)/i2cget.c $(TOOLS_DIR)/i2cbusses.h $(TOOLS_DI
 	$(CC) $(CFLAGS) $(TOOLS_CFLAGS) -c $< -o $@
 
 $(TOOLS_DIR)/i2cbusses.o: $(TOOLS_DIR)/i2cbusses.c $(TOOLS_DIR)/i2cbusses.h $(INCLUDE_DIR)/linux/i2c-dev.h
-	$(CC) $(TOOLS_CFLAGS) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) $(TOOLS_CFLAGS) -c $< -o $@
 
 $(TOOLS_DIR)/util.o: $(TOOLS_DIR)/util.c $(TOOLS_DIR)/util.h
 	$(CC) $(CFLAGS) $(TOOLS_CFLAGS) -c $< -o $@

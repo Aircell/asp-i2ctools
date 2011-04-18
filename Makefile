@@ -27,8 +27,6 @@ CFLAGS	?= -O2
 # When debugging, use the following instead
 #CFLAGS	:= -O -g
 CFLAGS	+= -Wall
-CFLAGS	+= -D_GCC_LIMITS_H_
-CFLAGS  += -I/usr/include
 
 KERNELVERSION	:= $(shell uname -r)
 
