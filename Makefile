@@ -2,10 +2,7 @@
 #
 # Copyright (C) 2007  Jean Delvare <khali@linux-fr.org>
 #
-# This program is free software; you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation; either version 2 of the License, or
-# (at your option) any later version.
+# Licensed under the GNU General Public License.
 
 DESTDIR	=
 prefix	= /usr/local
@@ -21,12 +18,14 @@ INSTALL_DIR	:= $(INSTALL) -m 755 -d
 INSTALL_PROGRAM	:= $(INSTALL) -m 755
 RM		:= rm -f
 
-CC	?= gcc
+#CC	:= gcc
+CC	:= $(HOME)/android/system/prebuilt/linux-x86/toolchain/arm-eabi-4.4.0/bin/arm-eabi-gcc
 
-CFLAGS	?= -O2
+CFLAGS	:= -Wall
+
+CFLAGS	+= -O2
 # When debugging, use the following instead
-#CFLAGS	:= -O -g
-CFLAGS	+= -Wall
+#CFLAGS	+= -O -g
 
 KERNELVERSION	:= $(shell uname -r)
 
@@ -34,7 +33,7 @@ KERNELVERSION	:= $(shell uname -r)
 
 all:
 
-EXTRA	:=
-#EXTRA	+= py-smbus
-SRCDIRS	:= include eeprom stub tools $(EXTRA)
-include $(SRCDIRS:%=%/Module.mk)
+include eeprom/Module.mk
+include include/Module.mk
+include stub/Module.mk
+include tools/Module.mk
