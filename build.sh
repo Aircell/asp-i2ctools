@@ -2,14 +2,13 @@
 # Cross-compile for Android
 #
 
-: ${workspace:=$PWD/..}
-
-# build step
-PATH+=:$workspace/cs-android-kernel/prebuilt/linux-x86/toolchain/arm-eabi-4.4.0/bin:$workspace/cs-android-agcc
+source ../bin/bash-android
 export CC=agcc
 make
 
-# installation step
+exit 0
+
+# installation step, needs to be moved into Hudson
 installdir=$workspace/../install.d
 mkdir -p /tmp/system/bin
 cd tools
