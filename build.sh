@@ -5,6 +5,7 @@
 source ../bin/bash-android
 export CC=agcc
 make
+make install
 
 exit 0
 

@@ -4,7 +4,7 @@
 #
 # Licensed under the GNU General Public License.
 
-DESTDIR	=
+DESTDIR	= $(PWD)
 prefix	= /usr/local
 bindir	= $(prefix)/bin
 sbindir	= $(prefix)/sbin
