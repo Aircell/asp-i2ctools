@@ -19,7 +19,6 @@ INSTALL_PROGRAM	:= $(INSTALL) -m 755
 RM		:= rm -f
 
 #CC	:= gcc
-CC	:= $(HOME)/android/system/prebuilt/linux-x86/toolchain/arm-eabi-4.4.0/bin/arm-eabi-gcc
 
 CFLAGS	:= -Wall
 
