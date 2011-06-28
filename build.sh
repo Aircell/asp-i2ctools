@@ -2,8 +2,8 @@
 # Cross-compile for Android
 #
 
-[ -f ../bin/bash-android ] && source ../bin/bash-android
 [ -f ~/.bash-android ] && source ~/.bash-android
+[ -f ../bin/bash-android ] && source ../bin/bash-android
 
 export CC=agcc
 make
