@@ -8,6 +8,5 @@
 export CC=agcc
 make
 make install
-cp local/sbin/* $STAGING_AREA/system/app
 
 exit 0
