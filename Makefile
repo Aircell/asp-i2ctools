@@ -29,6 +29,9 @@ CFLAGS	+= -O2
 
 KERNELVERSION	:= $(shell uname -r)
 
+clean:
+	rm -rf usr
+
 .PHONY: all strip clean install uninstall
 
 all:
